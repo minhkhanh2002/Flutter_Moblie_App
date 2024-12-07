@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/pages/details.dart';
 import 'package:my_flutter_app/widget/widget_support.dart';
 
 class Home extends StatefulWidget {
@@ -52,41 +53,47 @@ class _HomeState extends State<Home> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Container(
-                  margin: EdgeInsets.all(4),
-                  child: Material(
-                    elevation: 5,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      padding: EdgeInsets.all(14),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "images/food/comtam.png",
-                            height: 150,
-                            width: 150,
-                            fit: BoxFit.cover,
-                          ),
-                          Text(
-                            "Cơm tấm",
-                            style: AppWidget.semiBoldTextFieldStyle(),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "Ngon nhứt náck",
-                            style: AppWidget.LightTextFieldStyle(),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "\30000vnđ",
-                            style: AppWidget.semiBoldTextFieldStyle(),
-                          )
-                        ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Details()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(4),
+                    child: Material(
+                      elevation: 5,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        padding: EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "images/food/comtam.png",
+                              height: 150,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(
+                              "Cơm tấm",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "Ngon nhứt náck",
+                              style: AppWidget.LightTextFieldStyle(),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "\30000vnđ",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -140,23 +147,56 @@ class _HomeState extends State<Home> {
             height: 30,
           ),
           Container(
-            child: Row(
-              children: [
-                Image.asset(
-                  "images/food/bunpo.png",
-                  height: 120,
-                  width: 120,
-                  fit: BoxFit.fill,
-                ),
-                Column(
+            margin: EdgeInsets.only(right: 20),
+            child: Material(
+              elevation: 5,
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: EdgeInsets.all(5),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Bún bò Huế",
-                      style: AppWidget.boldTextFieldStyle(),
-                    )
+                    Image.asset(
+                      "images/food/bunpo.png",
+                      height: 120,
+                      width: 120,
+                      fit: BoxFit.fill,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Text(
+                            "Bún bò Huế đặc biệt thơm ngon mại dzô mại dzô",
+                            style: AppWidget.semiBoldTextFieldStyle(),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Text(
+                            "mpao",
+                            style: AppWidget.LightTextFieldStyle(),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Text("\25000vnđ",
+                              style: AppWidget.semiBoldTextFieldStyle()),
+                        ),
+                      ],
+                    ),
                   ],
-                )
-              ],
+                ),
+              ),
             ),
           ),
         ],
