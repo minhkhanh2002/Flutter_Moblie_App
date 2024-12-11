@@ -63,6 +63,7 @@ flutter:
   assets:
     - images/icons/
     - images/food/
+    - images/
     # - images/*
   #   - images/a_dot_ham.jpeg
 

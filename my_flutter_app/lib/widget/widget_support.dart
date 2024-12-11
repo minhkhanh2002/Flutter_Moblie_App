@@ -5,7 +5,7 @@ class AppWidget {
 
   //font in đậm
   static TextStyle boldTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
         color: Colors.black,
         fontSize: 20.0,
         fontWeight: FontWeight.bold,
@@ -14,7 +14,7 @@ class AppWidget {
 
   //font tiêu đề
   static TextStyle HeadLineTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
         color: Colors.black,
         fontSize: 24.0,
         fontWeight: FontWeight.bold,
@@ -23,7 +23,7 @@ class AppWidget {
 
   //font sub
   static TextStyle LightTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
         color: Colors.black38,
         fontSize: 15.0,
         fontWeight: FontWeight.w500,
@@ -32,7 +32,7 @@ class AppWidget {
 
   //font tên món
   static TextStyle semiBoldTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
         color: Colors.black,
         fontSize: 18.0,
         fontWeight: FontWeight.w500,

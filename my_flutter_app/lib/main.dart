@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/pages/bottomnav.dart';
 import 'package:my_flutter_app/pages/home.dart';
+import 'package:my_flutter_app/pages/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: BottomNav());
+        //home: const BottomNav());
+        home: LogIn());
   }
 }
 
