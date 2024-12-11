@@ -15,7 +15,7 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 50,
           left: 20,
           right: 20,
@@ -27,7 +27,7 @@ class _DetailsState extends State<Details> {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_new_outlined,
                 color: Colors.black,
               ),
@@ -38,7 +38,7 @@ class _DetailsState extends State<Details> {
               height: MediaQuery.of(context).size.height / 3,
               fit: BoxFit.fill,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
@@ -56,7 +56,7 @@ class _DetailsState extends State<Details> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                   onTap: () {
                     if (a > 1) {
@@ -69,13 +69,13 @@ class _DetailsState extends State<Details> {
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(4)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.remove,
                       color: Colors.white,
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 //số lượng
@@ -83,7 +83,7 @@ class _DetailsState extends State<Details> {
                   a.toString(),
                   style: AppWidget.semiBoldTextFieldStyle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 GestureDetector(
@@ -95,7 +95,7 @@ class _DetailsState extends State<Details> {
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(4)),
-                    child: Icon(
+                    child: const Icon(
                       Icons.add,
                       color: Colors.white,
                     ),
@@ -103,7 +103,7 @@ class _DetailsState extends State<Details> {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             //description
@@ -112,7 +112,7 @@ class _DetailsState extends State<Details> {
               maxLines: 3,
               style: AppWidget.LightTextFieldStyle(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -121,11 +121,11 @@ class _DetailsState extends State<Details> {
                   "Delivery Time",
                   style: AppWidget.semiBoldTextFieldStyle(),
                 ),
-                Icon(
+                const Icon(
                   Icons.alarm,
                   color: Colors.black54,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(
@@ -134,7 +134,7 @@ class _DetailsState extends State<Details> {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(bottom: 40),
               child: Row(
@@ -148,41 +148,41 @@ class _DetailsState extends State<Details> {
                         style: AppWidget.semiBoldTextFieldStyle(),
                       ),
                       Text(
-                        "\30.000",
+                        "30.000",
                         style: AppWidget.HeadLineTextFieldStyle(),
                       )
                     ],
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width / 2,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(10)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
+                        const Text(
                           "Add to cart",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontFamily: 'Poppins'),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                         ),
                         Container(
-                          padding: EdgeInsets.all(3),
+                          padding: const EdgeInsets.all(3),
                           decoration: BoxDecoration(
                               color: Colors.grey,
                               borderRadius: BorderRadius.circular(8)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.shopping_cart_outlined,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                       ],
