@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/pages/signup.dart';
 import 'package:my_flutter_app/widget/widget_support.dart';
 
 class LogIn extends StatefulWidget {
@@ -125,8 +126,14 @@ class _LogInState extends State<LogIn> {
                   SizedBox(
                     height: 60,
                   ),
-                  Text("Don't have an account? Sign up",
-                      style: AppWidget.semiBoldTextFieldStyle())
+                  GestureDetector(
+                    // onTap: () {
+                    //   Navigator.push(context,
+                    //       MaterialPageRoute(builder: (context) => SignUp()));
+                    // },
+                    child: Text("Don't have an account? Sign up",
+                        style: AppWidget.semiBoldTextFieldStyle()),
+                  )
                 ],
               ),
             )
