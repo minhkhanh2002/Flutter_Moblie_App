@@ -38,4 +38,12 @@ class AppWidget {
         fontWeight: FontWeight.w500,
         fontFamily: 'Poppins');
   }
+
+  static TextStyle ssemiBoldTextFieldStyle() {
+    return const TextStyle(
+        color: Colors.black,
+        fontSize: 15.0,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Poppins');
+  }
 }

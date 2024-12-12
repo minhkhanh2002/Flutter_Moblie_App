@@ -82,18 +82,18 @@ class _OnboardState extends State<Onboard> {
             ),
           ),
           GestureDetector(
-            // onTap: () {
-            //   if (currentIndex == contents.length - 1) {
-            //     Navigator.pushReplacement(
-            //         context,
-            //         MaterialPageRoute(
-            //           builder: (context) => SignUp(),
-            //         ));
-            //   }
-            //   _controller.nextPage(
-            //       duration: Duration(milliseconds: 100),
-            //       curve: Curves.bounceIn);
-            // },
+            onTap: () {
+              if (currentIndex == contents.length - 1) {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUp(),
+                    ));
+              }
+              _controller.nextPage(
+                  duration: Duration(milliseconds: 100),
+                  curve: Curves.bounceIn);
+            },
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.red, borderRadius: BorderRadius.circular(20)),
@@ -102,7 +102,7 @@ class _OnboardState extends State<Onboard> {
               width: double.infinity,
               child: Center(
                 child: Text(
-                  "Tiếp theo",
+                  currentIndex == contents.length - 1 ? "Bắt đầu" : "Tiếp theo",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,

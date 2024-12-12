@@ -14,11 +14,11 @@ List<UnboardingContent> contents = [
       title: '  Lựa chọn các món ăn\nTuyệt vời của chúng tôi'),
   UnboardingContent(
       description:
-          'Bạn có thể thanh toán bằng tiền mặt khi giao hàng \n hoặc thanh toán bằng thẻ',
+          'Thanh toán bằng tiền mặt khi nhận hàng \n         hoặc có thể thanh toán bằng thẻ',
       image: "images/purchase.png",
-      title: 'Dễ dàng khi thanh toán trực tuyến'),
+      title: 'Dễ dàng khi thanh toán '),
   UnboardingContent(
-      description: 'Giao hàng \n tận giường',
+      description: ' Vận chuyển tận tâm\n Hàng đến tận giường',
       image: "images/pic_delivery.png",
-      title: 'Giao hàng nhanh hơn cách NYC bạn trở mặt')
+      title: 'Giao hàng nhanh hơn\n cách NYC bạn trở mặt')
 ];

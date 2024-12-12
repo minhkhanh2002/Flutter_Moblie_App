@@ -24,8 +24,8 @@ class _LogInState extends State<LogIn> {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                    Color(0xFFff5c30),
-                    Color.fromARGB(255, 217, 252, 21),
+                    Color.fromARGB(211, 10, 124, 0),
+                    Color.fromARGB(255, 197, 240, 197),
                   ])),
             ),
             Container(
@@ -70,7 +70,7 @@ class _LogInState extends State<LogIn> {
                             height: 30,
                           ),
                           Text(
-                            "Login",
+                            "Đăng nhập",
                             style: AppWidget.HeadLineTextFieldStyle(),
                           ),
                           TextField(
@@ -85,7 +85,7 @@ class _LogInState extends State<LogIn> {
                           TextField(
                             obscureText: true,
                             decoration: InputDecoration(
-                                hintText: 'Password',
+                                hintText: 'Mật khẩu',
                                 hintStyle: AppWidget.semiBoldTextFieldStyle(),
                                 prefixIcon: Icon(Icons.password_outlined)),
                           ),
@@ -94,7 +94,7 @@ class _LogInState extends State<LogIn> {
                           ),
                           Container(
                             alignment: Alignment.topRight,
-                            child: Text("Forgot your password?",
+                            child: Text("Quên mật khẩu?",
                                 style: AppWidget.semiBoldTextFieldStyle()),
                           ),
                           SizedBox(
@@ -107,11 +107,11 @@ class _LogInState extends State<LogIn> {
                               padding: EdgeInsets.symmetric(vertical: 8),
                               width: 200,
                               decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 173, 54, 18),
+                                  color: Color.fromARGB(255, 114, 207, 135),
                                   borderRadius: BorderRadius.circular(20)),
                               child: Center(
                                   child: Text(
-                                "Login",
+                                "Đăng nhập",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontFamily: 'Poppins1',
@@ -131,8 +131,10 @@ class _LogInState extends State<LogIn> {
                     //   Navigator.push(context,
                     //       MaterialPageRoute(builder: (context) => SignUp()));
                     // },
-                    child: Text("Don't have an account? Sign up",
-                        style: AppWidget.semiBoldTextFieldStyle()),
+                    child: Text(
+                      "Chưa có tài khoản hả?\n         Đăng ký ngay",
+                      style: AppWidget.ssemiBoldTextFieldStyle(),
+                    ),
                   )
                 ],
               ),
