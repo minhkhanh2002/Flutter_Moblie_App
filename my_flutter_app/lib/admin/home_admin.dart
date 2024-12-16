@@ -1,48 +1,104 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/admin/addFood_admin.dart';
-import 'package:my_flutter_app/widget/widget_support.dart';
 
-class HomeAdmin extends StatefulWidget {
+class HomeAdmin extends StatelessWidget {
   const HomeAdmin({super.key});
 
   @override
-  State<HomeAdmin> createState() => _HomeAdminState();
-}
-
-class _HomeAdminState extends State<HomeAdmin> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
+      appBar: AppBar(
+        title: const Text("Admin Dashboard"),
+        backgroundColor: Colors.deepPurple,
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(child: Text("Home Admin", style: AppWidget.HeadLineTextFieldStyle(),),),
-            SizedBox(height: 50.0,),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> AddFood()));
-              },
-              child: Material(
-                elevation: 10.0,
-                borderRadius: BorderRadius.circular(10),
-                child: Center(
-                  child: Container(
-                    padding: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(10),
-
-                    ),
-                    child: Row(children: [
-                      Padding(padding: EdgeInsets.all(6.0),
-                        child: Image.asset("images/food.jpg", height: 100, width: 100, fit: BoxFit.cover,),),
-                      SizedBox(width: 30.0,) ,
-                      Text("Add Food Items", style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),) ],),
-                  ),
-                ),
+            const Text(
+              "Welcome, Admin!",
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
               ),
-            )
+            ),
+            const SizedBox(height: 20.0),
+            Expanded(
+              child: ListView(
+                children: [
+                  ListTile(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AddFood()),
+                      );
+                    },
+                    leading: Image.asset(
+                      "images/food/comtam.png",
+                      height: 50,
+                      width: 50,
+                      fit: BoxFit.cover,
+                    ),
+                    title: const Text(
+                      "Add Food Items",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: const Text("Manage and add new food items."),
+                    trailing: const Icon(Icons.arrow_forward_ios),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    tileColor: Colors.grey[200],
+                  ),
+                  const SizedBox(height: 10.0),
+                  ListTile(
+                    onTap: () {
+                      // Add more functionalities later
+                    },
+                    leading: const Icon(Icons.list, size: 50, color: Colors.deepPurple),
+                    title: const Text(
+                      "View Orders",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: const Text("Check and manage customer orders."),
+                    trailing: const Icon(Icons.arrow_forward_ios),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    tileColor: Colors.grey[200],
+                  ),
+                  const SizedBox(height: 10.0),
+                  ListTile(
+                    onTap: () {
+                      // Add more functionalities later
+                    },
+                    leading: const Icon(Icons.people, size: 50, color: Colors.deepPurple),
+                    title: const Text(
+                      "Manage Users",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: const Text("View and manage users."),
+                    trailing: const Icon(Icons.arrow_forward_ios),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    tileColor: Colors.grey[200],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
