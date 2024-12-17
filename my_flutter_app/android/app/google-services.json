@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "726120175952",
+    "project_id": "ttmobile2024-14ef5",
+    "storage_bucket": "ttmobile2024-14ef5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726120175952:android:b6f0aeb37c806e0d0cb455",
+        "android_client_info": {
+          "package_name": "com.example.my_flutter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-LAPDPeuFO5p-XyZ4lOL6rqnE32UOYrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/pages/details.dart';
 import 'package:my_flutter_app/widget/widget_support.dart';

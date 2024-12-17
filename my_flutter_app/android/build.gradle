@@ -1,3 +1,19 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'  // Phiên bản Kotlin mà bạn muốn sử dụng
+
+    repositories {
+        google()            // Kho lưu trữ Google để tải các thư viện Android
+        mavenCentral()      // Kho lưu trữ Maven Central để tải các thư viện khác
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'  // Plugin Gradle cho Android
+        classpath 'com.google.gms.google-services:4.3.15'
+        
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"  // Plugin Kotlin cho Gradle
+    }
+}
+
 allprojects {
     repositories {
         google()
