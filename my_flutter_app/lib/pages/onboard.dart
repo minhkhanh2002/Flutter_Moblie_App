@@ -44,7 +44,8 @@ class _OnboardState extends State<Onboard> {
                 },
                 itemBuilder: (_, i) {
                   return Padding(
-                    padding: EdgeInsets.only(top: 40, left: 20, right: 20),
+                    padding:
+                        const EdgeInsets.only(top: 40, left: 20, right: 20),
                     child: Column(
                       children: [
                         Image.asset(
@@ -53,14 +54,14 @@ class _OnboardState extends State<Onboard> {
                           width: MediaQuery.of(context).size.width,
                           fit: BoxFit.fill,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 40,
                         ),
                         Text(
                           contents[i].title,
                           style: AppWidget.semiBoldTextFieldStyle(),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(
@@ -87,23 +88,23 @@ class _OnboardState extends State<Onboard> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SignUp(),
+                      builder: (context) => const SignUp(),
                     ));
               }
               _controller.nextPage(
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   curve: Curves.bounceIn);
             },
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.red, borderRadius: BorderRadius.circular(20)),
               height: 60,
-              margin: EdgeInsets.all(40),
+              margin: const EdgeInsets.all(40),
               width: double.infinity,
               child: Center(
                 child: Text(
                   currentIndex == contents.length - 1 ? "Bắt đầu" : "Tiếp theo",
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
@@ -120,7 +121,7 @@ class _OnboardState extends State<Onboard> {
     return Container(
       height: 10,
       width: currentIndex == index ? 18 : 7,
-      margin: EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6), color: Colors.black38),
     );

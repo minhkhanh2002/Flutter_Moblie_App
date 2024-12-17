@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:my_flutter_app/widget/widget_support.dart';
 
 class Details extends StatefulWidget {
